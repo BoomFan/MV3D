@@ -5,7 +5,7 @@
 
 To clone,
 
-    $git clone --recursive  https://github.com/bostondiditeam/MV3D.git
+    $git clone --recursive  https://github.com/BoomFan/MV3D.git
 
 To pull, use 
 
