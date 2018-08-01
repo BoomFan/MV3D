@@ -35,7 +35,7 @@ Please refer to [here](https://drive.google.com/file/d/0B47OwD8fbxJNWWFmVUJ4OUV4
 ```
 ├── data   <-- all data is stored here. (Introduced in detail below)
 │   ├── predicted  <-- after prediction, results will be saved here.
-│   ├── preprocessed   <-- MV3D net will take inputs from here(after data.py) 
+│   ├── preprocessed   <-- MV3D net will take inputs from here(after "python3 data.py") 
 │   └── raw <-- raw data
 ├── environment_cpu.yml  <-- install cpu version.
 ├── README.md
@@ -70,7 +70,7 @@ Please refer to [here](https://drive.google.com/file/d/0B47OwD8fbxJNWWFmVUJ4OUV4
 │       ├── iou_per_obj.csv   <-- What will be evaluated for this competition, IoU score
 │       ├── pr_per_iou.csv   <--precision and recall rate per iou, currently not be evaluated by didi's rule
 │       └── tracklet_labels_pred.xml  <-- Tracklet generated from prediction pipeline. 
-├── preprocessed  <-- Data will be fed into MV3D net (After processed by data.py)
+├── preprocessed  <-- Data will be fed into MV3D net (After processed by "python3 data.py")
 │   ├── didi <-- When didi dataset is processed, save it here
 │   └── kitti <-- When Kitti dataset is processed, save it here
 │       ├── gt_boxes3d
@@ -149,7 +149,7 @@ sudo chmod 755 ./make.sh
 ./make.sh
 # prerequisite for next step, i.e. running preprocessing using data.py, is to 
 # follow steps in utils/bag_to_kitti if using didi data
-python data.py # for process raw data to input network input format
+python3 data.py # for process raw data to input network input format
 python train.py # training the network. 
 ```
 
